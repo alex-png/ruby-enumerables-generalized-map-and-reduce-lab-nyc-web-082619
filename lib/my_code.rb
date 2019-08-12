@@ -10,9 +10,8 @@ new
 end
 
 
-def reduce(accumulator, &block)
-  each do |element|
-    accumulator = block.call(accumulator, element)
-  end
-  accumulator
+def reduce(source_array, starting_point = 0)
+  new = starting_point
+  new = yield(source_array)
+  new
 end
