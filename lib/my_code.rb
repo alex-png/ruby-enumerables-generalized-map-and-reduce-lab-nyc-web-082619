@@ -12,15 +12,15 @@ end
 
 def reduce(array, starting_point=nil)
   if starting_point
-    accum = starting_point
+    sum = starting_point
     i = 0
   else
-    accum = array[0]
+    sum = array[0]
     i = 1
   end
   while i < array.length
-    accum = yield(accum, array[i])
+    sum = yield(accum, array[i])
     i += 1
   end
-  accum
+  sum
 end
