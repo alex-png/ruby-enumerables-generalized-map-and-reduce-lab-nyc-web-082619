@@ -16,7 +16,7 @@ source_array << starting_point
 sum = 0
 count = 0
   while source_array[count]
-    sum += source_array[count]
+    sum += yield(source_array[count])
     elsif source_array[count] == false 
       return false
     end
