@@ -12,6 +12,6 @@ end
 
 def reduce(source_array, starting_point = 0)
   new = starting_point
-  new = yield(source_array)
+  new += yield(source_array)
   new
 end
