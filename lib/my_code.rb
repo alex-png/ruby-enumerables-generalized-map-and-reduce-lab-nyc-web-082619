@@ -11,11 +11,12 @@ end
 
 
 def reduce(source_array, starting_point = 0)
-new = starting_point
-count = 0 
-while count < source_array.size
-new += yeild(source_array[count])
-count += 1 
-end
-new
+source_array << starting_point
+sum = 0
+count = 0
+  while source_array[count]
+    sum += source_array[count]
+    count += 1
+  end
+  sum
 end
