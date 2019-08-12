@@ -15,7 +15,7 @@ source_array << starting_point
 sum = 0
 count = 0
   while source_array[count]
-    sum = yield(source_array[count])
+    sum << yield(source_array[count])
     count += 1
   end
   sum
