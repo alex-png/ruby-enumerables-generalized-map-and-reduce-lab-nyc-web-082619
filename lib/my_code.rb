@@ -10,7 +10,6 @@ new
 end
 
 
-
 def reduce(array, starting_point=nil)
   if starting_point
     accum = starting_point
