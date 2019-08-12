@@ -17,7 +17,10 @@ sum = 0
 count = 0
   while source_array[count]
     sum += source_array[count]
-    count += 1
+    elsif source_array[count] == false 
+      return false
+    end
+  count += 1
   end
   sum
 end
