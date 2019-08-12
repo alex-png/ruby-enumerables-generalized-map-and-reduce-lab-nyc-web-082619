@@ -11,16 +11,16 @@ end
 
 
 
-def reduce(s, sp=nil)
-  if sp
-    accum = sp
+def reduce(array, starting_point=nil)
+  if starting_point
+    accum = starting_point
     i = 0
   else
-    accum = s[0]
+    accum = array[0]
     i = 1
   end
-  while i < s.length
-    accum = yield(accum, s[i])
+  while i < array.length
+    accum = yield(accum, array[i])
     i += 1
   end
   accum
