@@ -11,18 +11,17 @@ end
 
 
 
-def reduce(source_array, starting_point = 0)
-source_array << starting_point
-sum = 0
-count = 0
-  while count < source_array.size
-    if source_array[count] == false 
-      source_array = false 
-    elsif source_array[count] == true 
-      source_array = true 
-    else sum << yield(source_array[count])
-    end
-    count += 1 
-  end 
-  sum
-end 
+def reduce(s, sp=nil)
+  if sp
+    accum = sp
+    i = 0
+  else
+    accum = s[0]
+    i = 1
+  end
+  while i < s.length
+    accum = yield(accum, s[i])
+    i += 1
+  end
+  accum
+end
